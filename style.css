@@ -1,16 +1,49 @@
+@font-face {
+    font-family: 'Dotted';
+    src: url(./Dotted.ttf) format('truetype');
+}
 /* Center everything on the screen */
+
+
 body {
-    font-family: Arial, sans-serif;
-    background-image: linear-gradient(rgb(98, 0, 190),rgb(0, 0, 0));
+    background-image:linear-gradient(rgba(98, 0, 190),rgba(0, 0, 0));
+    background-size: cover;
     background-repeat: no-repeat;
+    margin: 0;
+}
+
+.backG {
+    opacity: 0;
+    transition: opacity 1s ease-in-out;
+    background-image: url('./roblox-noob.gif');
     background-size: cover;
     background-position: center;
+    background-repeat: no-repeat;
+    height: 100vh;
+    position: relative;
+    object-fit: cover;
+}
+
+main {
+    position:absolute;
+    position: absolute;
+    top: 0px;       /* Distance from the top of the container */
+    left: 0px;      /* Distance from the left of the container */
+    z-index: 10;
     display: flex;
     flex-direction: column;
     justify-content: center;
     align-items: center;
-    height: 100vh;
+    height: 100%;
+    width: 100%;
     margin: 0;
+    padding: 10;
+}
+
+h1 {
+    color: rgb(0, 0, 0);
+    text-shadow: 0 0 30px rgb(111, 0, 255),0 0 30px rgb(111, 0, 255),0 0 30px rgb(111, 0, 255);
+    font-family: "Dotted";
 }
 
 /* Style the content box */
@@ -21,7 +54,7 @@ body {
     -webkit-backdrop-filter: blur(15px);
     padding: 30px;
     border-radius: 20px;
-    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+    box-shadow: 0 0px 10px rgb(111, 0, 255);
     text-align: center;
     margin: 20px;
 }
@@ -36,6 +69,7 @@ button {
     border-radius: 5px;
     cursor: pointer;
     transition: background 0.2s;
+    margin: 10px;
 }
 
 .resetBtn {
@@ -51,12 +85,11 @@ button {
 
 .resetBtn:hover {
     background-color: #850000;
-    outline-color: #850000;
-    outline-width: 3px;
-    outline-style: solid
+    box-shadow: 0 0px 10px #850000;
 }
 
 
 button:hover {
     background-color: #0056b3;
+    box-shadow: 0 0px 10px #0056b3;
 }
