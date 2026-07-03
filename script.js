@@ -3,6 +3,8 @@ const resButton = document.getElementById('resetBtn');
 const roblox = document.getElementById('roblox');
 const back = document.getElementById('backG')
 const greeting = document.getElementById('greeting');
+const themechoice1 = document.getElementById('theme1');
+const test1 = document.getElementById('test1');
 
 
 // Add a click event to the button
@@ -15,7 +17,8 @@ button.addEventListener('click', () => {
 
 resButton.addEventListener('click', () => {
     greeting.textContent = "Hello, World!";
-    greeting.style.color = "#000000"; // Changes text to black
+    greeting.style.color = "#000000";
+   // Changes text to black
 });
 
 roblox.addEventListener('mouseenter', () => {
@@ -24,4 +27,8 @@ roblox.addEventListener('mouseenter', () => {
 
 roblox.addEventListener('mouseleave', () => {
     back.style.opacity = 0;
+});
+
+themechoice1.addEventListener('input', () => {
+    document.documentElement.style.setProperty('--theme-color-1', themechoice1.value);
 });

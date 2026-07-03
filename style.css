@@ -3,10 +3,12 @@
     src: url(./Dotted.ttf) format('truetype');
 }
 /* Center everything on the screen */
-
+:root {
+    --theme-color-1: #ae00ff;
+}
 
 body {
-    background-image:linear-gradient(rgba(98, 0, 190),rgba(0, 0, 0));
+    background-image:linear-gradient(var(--theme-color-1),rgba(0, 0, 0));
     background-size: cover;
     background-repeat: no-repeat;
     margin: 0;
@@ -42,7 +44,7 @@ main {
 
 h1 {
     color: rgb(0, 0, 0);
-    text-shadow: 0 0 30px rgb(111, 0, 255),0 0 30px rgb(111, 0, 255),0 0 30px rgb(111, 0, 255);
+    text-shadow: 0 0 30px var(--theme-color-1),0 0 30px var(--theme-color-1),0 0 30px var(--theme-color-1);
     font-family: "Dotted";
 }
 
@@ -54,14 +56,14 @@ h1 {
     -webkit-backdrop-filter: blur(15px);
     padding: 30px;
     border-radius: 20px;
-    box-shadow: 0 0px 10px rgb(111, 0, 255);
+    box-shadow: 0 0px 10px var(--theme-color-1);
     text-align: center;
     margin: 20px;
 }
 
 /* Style the button */
 button {
-    background-color: rgba(0, 81, 255, 0.267);
+    background-color: var(--theme-color-1);
     color: white;
     border: none;
     padding: 10px 20px;
@@ -90,6 +92,6 @@ button {
 
 
 button:hover {
-    background-color: #0056b3;
-    box-shadow: 0 0px 10px #0056b3;
+    background-color: var(--theme-color-1);
+    box-shadow: 0 0px 10px var(--theme-color-1);
 }
